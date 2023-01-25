@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Записи в блоге</h1>
+{% for item in notes%}
+<div class="note">
+ <h2>{{item.title}}</h2>
+ <div>
+ {{item.content}}
+ </div>
+ <div>
+ Автор записи - {{item.user.name}}, дата создания - {{item.created_date}}
+ </div>
+</div>
+{% endfor %}
+{% endblock %}
